@@ -1,5 +1,6 @@
 import React from "react";
 import { FaApple } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
@@ -139,7 +140,10 @@ const Register = () => {
             </button>
           </div>
           <p className="text-center text-[16px] font-medium mt-5">
-            Have an account? <span className="text-[#1E99F5]">Sign In</span>
+            Have an account?{" "}
+            <Link to={"/login"}>
+              <span className="text-[#1E99F5]">Sign In</span>
+            </Link>
           </p>
         </div>
       </div>
