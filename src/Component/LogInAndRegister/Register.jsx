@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import { FaApple } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Register = () => {
-  const { userCreate } = useContext(AuthContext);
+  const { userCreate, userLogOut } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -20,6 +21,8 @@ const Register = () => {
       .then((createUser) => {
         const user = createUser.user;
         console.log(user);
+        userLogOut();
+        navigate("/login");
       })
       .catch((error) => {
         const errorMessage = error.message;
