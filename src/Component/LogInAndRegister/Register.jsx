@@ -1,8 +1,19 @@
 import React from "react";
 import { FaApple } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Form, Link } from "react-router-dom";
 
 const Register = () => {
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const firstName = e.target.firstName.value;
+    const lastName = e.target.lastName.value;
+    const picture = e.target.picture.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const allInputField = { firstName, lastName, picture, email, password };
+    console.log(allInputField);
+  };
+
   return (
     <div className="mt-8">
       <div className="flex flex-row-reverse w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg  dark:bg-gray-800 lg:max-w-4xl">
@@ -40,75 +51,95 @@ const Register = () => {
           <p className="text-center text-base font-medium text-[#707070]">
             Signup for purchase your desire products
           </p>
-
-          <div className="flex space-x-3">
-            <div className="mt-4">
-              <input
-                id="LoggingEmailAddress"
-                className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
-                type="text"
-                placeholder="First name (optional)"
-                required
-              />
+          <form onSubmit={handleRegister}>
+            <div className="flex space-x-3">
+              <div className="mt-4">
+                <input
+                  id="LoggingEmailAddress"
+                  className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
+                  type="text"
+                  name="firstName"
+                  placeholder="First name (optional)"
+                  required
+                />
+              </div>
+              <div className="mt-4">
+                <input
+                  id="LoggingEmailAddress"
+                  className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
+                  type="text"
+                  name="lastName"
+                  placeholder="Last name (optional)"
+                  required
+                />
+              </div>
             </div>
             <div className="mt-4">
+              <label
+                className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
+                htmlFor="LoggingEmailAddress"
+              >
+                Your picture
+              </label>
               <input
                 id="LoggingEmailAddress"
                 className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
-                type="text"
+                type="file"
+                name="picture"
                 placeholder="Last name (optional)"
                 required
               />
             </div>
-          </div>
-          <div className="mt-4">
-            <label
-              className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
-              htmlFor="LoggingEmailAddress"
-            >
-              Email Address
-            </label>
-            <input
-              id="LoggingEmailAddress"
-              className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
-              type="email"
-              placeholder="Email address"
-              required
-            />
-          </div>
-
-          <div className="mt-4">
-            <div className="flex justify-between">
+            <div className="mt-4">
               <label
                 className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
-                htmlFor="loggingPassword"
+                htmlFor="LoggingEmailAddress"
               >
-                Password
+                Email Address
               </label>
+              <input
+                id="LoggingEmailAddress"
+                className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
+                type="email"
+                name="email"
+                placeholder="Email address"
+                required
+              />
             </div>
 
-            <input
-              id="loggingPassword"
-              className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
-              type="password"
-              placeholder="Enter password"
-              required
-            />
-          </div>
+            <div className="mt-4">
+              <div className="flex justify-between">
+                <label
+                  className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
+                  htmlFor="loggingPassword"
+                >
+                  Password
+                </label>
+              </div>
 
-          <div className="flex space-x-1 items-center mt-2">
-            <input type="checkbox" name="" id="" />
-            <p className="text-[14px] font-medium">
-              I agree to the Terms & Policy
-            </p>
-          </div>
+              <input
+                id="loggingPassword"
+                className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
+                type="password"
+                name="password"
+                placeholder="Enter password"
+                required
+              />
+            </div>
 
-          <div className="mt-6">
-            <button className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-black rounded-lg hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50">
-              Sign In
-            </button>
-          </div>
+            <div className="flex space-x-1 items-center mt-2">
+              <input type="checkbox" name="" id="" />
+              <p className="text-[14px] font-medium">
+                I agree to the Terms & Policy
+              </p>
+            </div>
 
+            <div className="mt-6">
+              <button className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-black rounded-lg hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50">
+                Sign up
+              </button>
+            </div>
+          </form>
           <div className="flex items-center justify-between mt-4">
             <span className="w-1/5 border-b dark:border-gray-600 lg:w-1/4"></span>
 
