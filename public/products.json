@@ -1,0 +1,87 @@
+[
+    {
+      "title": "Recliner Chair Wood",
+      "image": "https://i.ibb.co/LnGZb6B/image-125-removebg-preview-1.png",
+      "price": 299.99,
+      "discount": 30,
+      "description": "A sleek and modern office chair made from high-quality leather for comfort and style."
+    },
+    {
+      "title": "Timber Ride Padded",
+      "image": "https://i.ibb.co/T0GHbc3/rocking-chair-with-padded-seat-1.png",
+      "price": 199.99,
+      "discount": 10,
+      "description": "A breathable mesh desk chair designed for optimal lumbar support and long hours of work."
+    },
+    {
+      "title": "Colored Wooden Chair",
+      "image": "https://i.ibb.co/vYhM4qw/image-146.png",
+      "price": 120.00,
+      "discount": 30,
+      "description": "A classic wooden chair with cushioned seating, perfect for your dining room."
+    },
+    {
+      "title": "Blank Bamboo Wicker",
+      "image": "https://i.ibb.co/HF9WryN/image-147-1.png",
+      "price": 350.50,
+      "discount": 30,
+      "description": "This luxurious velvet chair adds a pop of color and comfort to any living space."
+    },
+    {
+      "title": "Isolated Wooden Rock",
+      "image": "https://i.ibb.co/SKDYDfh/image-148.png",
+      "price": 150.00,
+      "discount": 30,
+      "description": "A stylish and minimal metal frame chair that offers a sleek look for modern interiors."
+    },
+    {
+      "title": "Minimal Empty Rocking",
+      "image": "https://i.ibb.co/SKDYDfh/image-148.png",
+      "price": 499.99,
+      "discount": 30,
+      "description": "A plush recliner with padded cushions and footrest, perfect for relaxing."
+    },
+    {
+      "title": "Timber Ride Padded",
+      "image": "https://i.ibb.co/LnGZb6B/image-125-removebg-preview-1.png",
+      "price": 375.00,
+      "discount": 30,
+      "description": "A comfortable lounge chair with an oak frame and neutral tones, inspired by Scandinavian design."
+    },
+    {
+      "title": "Colored Wooden Chair",
+      "image": "https://i.ibb.co/T0GHbc3/rocking-chair-with-padded-seat-1.png",
+      "price": 280.00,
+      "discount": 30,
+      "description": "A set of four faux leather dining chairs with chrome legs for a modern dining experience."
+    },
+    {
+      "title": "Blank Bamboo Wicker",
+      "image": "https://i.ibb.co/vYhM4qw/image-146.png",
+      "price": 230.99,
+      "discount": 30,
+      "description": "A high-back gaming chair with adjustable height, armrests, and a swivel function for gamers."
+    },
+    {
+      "title": "Isolated Wooden Rock",
+      "image": "https://i.ibb.co/HF9WryN/image-147-1.png",
+      "price": 450.00,
+      "discount": 30,
+      "description": "A vintage-style leather armchair with brass studs, perfect for a classic or industrial look."
+    },
+    {
+      "title": "Outdoor Patio Folding Chair",
+      "image": "https://i.ibb.co/SKDYDfh/image-148.png",
+      "price": 89.99,
+      "discount": 30,
+      "description": "A lightweight, foldable chair for outdoor patio use, made with weather-resistant materials."
+    },
+    {
+      "title": "Minimal Empty Rocking",
+      "image": "https://i.ibb.co/SKDYDfh/image-148.png",
+      "price": 399.00,
+      "discount": 30,
+      "description": "An executive office chair with high-back support, ergonomic design, and adjustable features."
+    }
+  ]
+  
