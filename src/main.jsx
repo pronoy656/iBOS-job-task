@@ -11,6 +11,7 @@ import Categories from "./Component/Pages/Categories.jsx";
 import Custom from "./Component/Pages/Custom.jsx";
 import Blog from "./Component/Pages/Blog.jsx";
 import Login from "./Component/LogInAndRegister/Login.jsx";
+import Register from "./Component/LogInAndRegister/Register.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
     ],
   },

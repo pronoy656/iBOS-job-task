@@ -1,4 +1,5 @@
 import { FaApple } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -30,16 +31,14 @@ const Login = () => {
 
         <div className="w-full px-6 py-8 md:px-8 lg:w-1/2 bg-[#F5F5F5]">
           <p className="mt-3 text-[24px] font-semibold text-center text-[#000000] dark:text-gray-200">
-            Welcome to
-          </p>
-          <p className="text-[40px] font-bold text-center">
-            Furni<span className="text-[#4977EE]">Flex</span>
-          </p>
-          <p className="text-center text-base font-medium text-[#707070]">
-            Signup for purchase your desire products
+            Welcome Back
           </p>
 
-          <div className="flex space-x-3">
+          <p className="text-center text-base font-medium text-[#707070]">
+            Enter your Credentials to access your account
+          </p>
+
+          {/* <div className="flex space-x-3">
             <div className="mt-4">
               <input
                 id="LoggingEmailAddress"
@@ -58,7 +57,7 @@ const Login = () => {
                 required
               />
             </div>
-          </div>
+          </div> */}
           <div className="mt-4">
             <label
               className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
@@ -138,7 +137,10 @@ const Login = () => {
             </button>
           </div>
           <p className="text-center text-[16px] font-medium mt-5">
-            Have an account? <span className="text-[#1E99F5]">Sign In</span>
+            Have an account?{" "}
+            <Link to={"/register"}>
+              <span className="text-[#1E99F5]">Sign up</span>
+            </Link>
           </p>
         </div>
       </div>
