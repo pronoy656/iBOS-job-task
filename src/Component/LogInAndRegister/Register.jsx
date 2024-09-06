@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaApple } from "react-icons/fa";
-import { Form, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Register = () => {
+  const { userCreate } = useContext(AuthContext);
+
   const handleRegister = (e) => {
     e.preventDefault();
     const firstName = e.target.firstName.value;
@@ -12,6 +15,17 @@ const Register = () => {
     const password = e.target.password.value;
     const allInputField = { firstName, lastName, picture, email, password };
     console.log(allInputField);
+
+    userCreate(email, password)
+      .then((createUser) => {
+        const user = createUser.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        const errorCode = error.code;
+        console.log(errorMessage, errorCode);
+      });
   };
 
   return (
@@ -87,7 +101,6 @@ const Register = () => {
                 type="file"
                 name="picture"
                 placeholder="Last name (optional)"
-                required
               />
             </div>
             <div className="mt-4">
