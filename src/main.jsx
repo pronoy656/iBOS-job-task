@@ -12,6 +12,7 @@ import Custom from "./Component/Pages/Custom.jsx";
 import Blog from "./Component/Pages/Blog.jsx";
 import Login from "./Component/LogInAndRegister/Login.jsx";
 import Register from "./Component/LogInAndRegister/Register.jsx";
+import toast, { Toaster } from "react-hot-toast";
 
 import {
   useQuery,
@@ -68,5 +69,6 @@ createRoot(document.getElementById("root")).render(
         <RouterProvider router={router} />
       </AuthProvider>
     </QueryClientProvider>
+    <Toaster />
   </StrictMode>
 );

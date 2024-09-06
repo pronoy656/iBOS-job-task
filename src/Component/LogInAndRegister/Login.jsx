@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { FaApple } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const { userLogin } = useContext(AuthContext);
@@ -18,6 +19,7 @@ const Login = () => {
     userLogin(email, password)
       .then((logInUser) => {
         console.log(logInUser.user);
+        toast.success("login successfully");
         navigate(location?.state ? location?.state : "/");
       })
       .catch((error) => {

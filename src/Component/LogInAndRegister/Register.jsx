@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { FaApple } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const { userCreate, userLogOut } = useContext(AuthContext);
@@ -21,6 +22,7 @@ const Register = () => {
       .then((createUser) => {
         const user = createUser.user;
         console.log(user);
+        toast.success("Account created successfully");
         userLogOut();
         navigate("/login");
       })
